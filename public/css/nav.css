@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+nav {
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -6px 10px #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.links-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+nav .link:hover {
+    color: var(--primary-color);
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+}
+
+nav svg {
+    fill: var(--text-color);
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+    display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button:hover {
+    cursor: pointer;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.initial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    /* Tamaño del círculo */
+    height: 35px;
+    /* Tamaño del círculo */
+    border-radius: 50%;
+    /* Hace el círculo redondo */
+    background-color: #f44336;
+    /* Color de fondo */
+    margin-right: 20px;
+}
+
+.user-initial {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+
+}
+
+.out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.out i.fa-right-from-bracket {
+    font-size: 25px;
+    color: #000000;
+    /* Color original del icono */
+    cursor: pointer;
+    /* Cambia el cursor a un puntero */
+    transition: color 0.2s;
+    /* Opcional: añade una transición suave */
+}
+
+.out i.fa-right-from-bracket:hover {
+    color: var(--primary-color);
+    /* Color del icono al hacer hover */
+}
+
+
+.search {
+    position: relative;
+    width: 80vw;
+    display: flex;
+    margin: 30px auto;
+}
+
+.input-search {
+    width: 1000px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--link-color);
+    outline: none;
+}
+
+.button-search {
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+}
+
+.exit {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+.cerrar-sesion {
+    width: 24px;
+    height: 24px;
+}
+
+.cerrar-sesion:hover {
+    cursor: pointer;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown1 {
+    float: left ;
+    overflow: hidden;
+}
+
+/* Estilos para el botón del menú desplegable */
+.dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Muestra el menú desplegable al pasar el mouse sobre el botón del menú desplegable */
+.dropdown1:hover .dropdown-content{
+    display: block ;
+}
+
+
+@media(max-width: 800px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        width: 300px;
+
+        background-color: #fff;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.4s ease-out;
+    }
+
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+    .open-sidebar-button {
+        margin-left: auto;
+    }
+
+    .open-sidebar-button,
+    .close-sidebar-button {
+        padding: 20px;
+        display: block;
+    }
+
+    #sidebar-active:checked~.links-container {
+        right: 0;
+    }
+
+    #sidebar-active:checked~#overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    .mobile-only {
+        display: initial;
+    }
+
+    .pc-only {
+        display: none;
+    }
+}

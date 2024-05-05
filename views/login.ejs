@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title> Login </title>
+
+</head>
+    <body>
+        
+        <form action="/auth/login" method="POST">
+            <div class="body">
+                <div class="container-form">
+                    <div class="head-login">
+                        <h1 class="title">Iniciar Sesión</h1>
+                        <p class="definition">Ingresa con tu correo institucional y contraseña</p>
+                    </div>
+                    
+                    
+                    <div class="section-form">
+                        <label class="label-form" for="email">Correo</label>
+                        <input class="input-form" type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+                    </div>
+
+                    <div class="section-form">
+                        <label class="label-form" for="password">Contraseña</label>
+                        <input class="input-form" type="password" name="password" id="password" placeholder="Contraseña" required>
+
+                        <a href="#" class="link">¿Olvidó su contraseña?</a>
+                    </div>
+
+                    <div class="section-form">
+                        <button class="button button-form-login" type="submit">Iniciar sesión</button>
+
+                        <p class="complement">¿No tiene una cuenta? <a href="/new/register" class="linkC">Registrarse.</a></p>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+        <%- include('footer') %>
+    

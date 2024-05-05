@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/images/ico.jpg" />
+  <title>Editar perfil</title>
+</head>
+
+<body>
+  <%- include('nav') %>
+    <div class="container">
+      <h1>Editar perfil</h1>
+
+      <form action="#">
+        <div class="row">
+          <div class="col">
+            <label for="cedula">Cedula</label>
+            <input type="text" id="cedula" name="cedula" value="<%= usuario.cedula %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" value="<%= usuario.name %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="last_name">Apellido</label>
+            <input type="text" id="last_name" name="last_name" value="<%= usuario.last_name %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="phone_number">Teléfono</label>
+            <input type="text" id="phone_number" name="phone_number" value="<%= usuario.phone_number %>"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" value="<%= usuario.email %>"/>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" value="<%= usuario.password %>"/>
+          </div>
+        </div>
+
+        <div class="rowbtn">
+          <div class="col">
+            <button type="submit" onclick="exito()" class="btnguardar2"><span>Guardar</span></button>
+            <% if (usuario.user_type === 'Administrador') { %>
+              <a href="/admin/viewProfile" class="btncancelar">Cancelar</a>
+            <%} else {%>
+              <a href="/user/viewProfile" class="btncancelar">Cancelar</a>
+            <%}%>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="/public/js/alert2.js"></script>
+    <script src="/public/js/alert.js"></script>
+
+</body>
+
+</html>

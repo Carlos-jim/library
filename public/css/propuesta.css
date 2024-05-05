@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 100vw;
+    margin: 0 auto;
+    padding-top: 2rem;
+
+}
+.title{
+    margin-left: 14rem;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1, h2, a, p ,h3{
+    font-family: "Montserrat", serif;
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 70vw;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img img{
+    width: 17rem;
+    height: 10rem;
+    border-radius: 15px;
+    
+}
+
+.img{
+    margin-left: 5rem;
+
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+   font-weight: 600;
+    color: #949393;
+}
+
+.card a {
+    text-decoration: none;
+    color: #000;
+    background-color: #e4e0e0;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+
+.card a:hover {
+    color: #666;
+}
+
+@media only screen and (max-width: 946px){
+
+    .card{
+        flex-direction: column;
+
+    }
+
+    .img{
+        padding-top: 5rem;
+        margin-left: 0px;
+    }
+
+    .title{
+        margin-left: 3rem;
+    }
+
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/images/ico.jpg" />
+  <title>Perfil</title>
+
+</head>
+
+<body>
+  <%- include('nav') %>
+
+    <div class="container">
+      <h1>Datos personales</h1>
+
+      <form action="#">
+        <div class="row">
+          <div class="col">
+            <label for="cedula">Cedula</label>
+            <input type="text" id="cedula" name="cedula" value="<%= usuario.cedula %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" value="<%= usuario.name %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="last_name">Apellido</label>
+            <input type="text" id="last_name" name="last_name" value="<%= usuario.last_name %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Rol</label>
+          <div class="option"><%= usuario.user_type %></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="phone_number">Teléfono</label>
+            <input type="text" id="phone_number" name="phone_number" value="<%= usuario.phone_number %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" value="<%= usuario.email %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" value="<%= usuario.password %>" disabled />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <% if (usuario.user_type === 'Administrador') { %>
+              <a href="/admin/editProfile" class="btnredireccionar">Editar</a>
+            <%} else {%>
+              <a href="/user/editProfile" class="btnredireccionar">Editar</a>
+            <%}%> 
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="/biblioteca/public/js/alert2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <title> Register </title>
+
+</head>
+
+<body>
+
+    <form action="/new/register" method="POST">
+        <div class="body">
+            <div class="container-form">
+
+                <div class="head-register">
+                    <h1 class="title">Registrarse</h1>
+                    <p class="definition">Complete el formulario para registrarse</p>
+                </div>
+
+
+                <div class="section-form">
+                    <label class="label-form" for="cedula">Cédula</label>
+                    <input class="input-form" type="text" name="cedula" id="cedula"
+                        placeholder="Ingrese su cédula de identidad" required>
+                </div>
+
+                <div class="section-form">
+                    <label class="label-form" for="name">Nombre</label>
+                    <input class="input-form" type="text" name="name" id="name" placeholder="Ingrese su nombre" required>
+                </div>
+
+                <div class="section-form">
+                    <label class="label-form" for="last_name">Apellido</label>
+                    <input class="input-form" type="text" name="last_name" id="last_name"
+                        placeholder="Ingrese su apellido" required>
+                </div>
+
+                <div class="section-form">
+                    <label class="label-form" for="phone_number">Teléfono</label>
+                    <input class="input-form" type="text" name="phone_number" id="phone_number"
+                        placeholder="Ingrese su numero telefónico" required>
+                </div>
+
+                <div class="section-form role-box">
+                    <div class="option onclick="selectRole(this)">Estudiante</div>
+                    <div class="option onclick="selectRole(this)">Profesor</div>
+                </div>
+
+                <!-- Campo oculto para almacenar el rol seleccionado -->
+                <input type="hidden" id="user_type" name="user_type" value="" required>
+
+                <div class="section-form">
+                    <label class="label-form" for="email">Correo</label>
+                    <input class="input-form" type="email" name="email" id="email"
+                        placeholder="Ingrese su correo electrónico" required>
+                </div>
+
+                <div class="section-form">
+                    <label class="label-form" for="password">Contraseña</label>
+                    <input class="input-form" type="password" name="password" id="password"
+                        placeholder="Ingrese su contraseña" required>
+                </div>
+
+                <div class="section-form">
+                    <a href="#"><button type="submit" class="button button-form-register">Registrarse</button></a>
+                    <p class="complement">¿Ya tiene una cuenta? <a href="/auth/login" class="link">Iniciar Sesión.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    
+    <%- include('footer') %>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="shortcut icon" href="/images/ico.jpg" />
+    <title>Carreras</title>
+</head>
+
+<body>
+    <%- include('nav') %>
+        <div class="container no-select">
+            <div class="search">
+                <input class="input-search" type="text" placeholder="Buscar alguna carrera">
+                <button class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="courses-section section">
+
+                <% courses.forEach(course=> { %>
+                    <div class="course-card">
+                        <img class="course-img" src="<%= course.image_path %>" alt="">
+                        <div class="course-content">
+
+                            <h3 class="course-title"><%= course.title %></h3>
+                            <p class="course-description"><%= course.description %></p>
+                            <a class="btn btn-blue" href="/user/courses/course/<%= course.id %>">Leer más</a>
+                        </div>
+                    </div>
+                <% }) %>
+
+            </div>
+        </div>
+
+
+        <%- include('footer') %>

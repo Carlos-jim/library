@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="shortcut icon" href="/images/ico.jpg">
+  <title>Registrar Carrera</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/fileinput.css" />
+</head>
+
+<body>
+  <%- include('../nav') %>
+
+    <div class="container-lg">
+      <h1>Registrar carrera</h1>
+
+
+      <form class="form" action="/admin/registerCourse" method="POST" enctype="multipart/form-data">
+        <div class="row g-2">
+          <div class="col-sm">
+            <label for="tituloCarrera">Titulo</label>
+            <input type="text" id="tituloCarrera" name="tituloCarrera" placeholder="Ingrese el titulo de la carrera"
+              class="input" />
+          </div>
+
+          <div class="col-sm">
+            <label for="categoriaCarrera">Categoria</label>
+            <select class="form-select" aria-label="Categoria" name="categoriaCarrera">
+              <option selected>Categoria de la carrera</option>
+              <option value="1">PFG</option>
+              <option value="2">PNF</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="row g-2" id="cambiar">
+
+          <div class="col-sm" id="descripcion">
+            <label for="descripcion">Descripción</label><br>
+            <textarea name="descripcion" placeholder="Ingrese la descripcion" id="descripcion" cols="30"
+              rows="10"></textarea>
+          </div>
+
+        </div>
+
+        <br>
+        <br>
+        <div class="row g-2">
+          <div class="col-sm">
+            <label for="agregarImg">Seleccionar imagen de la carrera</label>
+            <div class="container-input">
+              <input type="file" name="file-1" id="file-1" class="inputfile inputfile-1"
+                data-multiple-caption="{count} archivos seleccionados" multiple accept="image/*" />
+              <label for="file-1">
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
+                  viewBox="0 0 20 17">
+                  <path
+                    d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                  </path>
+                </svg>
+                <span class="iborrainputfile">Seleccionar imagen</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit"><span>Enviar</span></button>
+
+      </form>
+    </div>
+
+    <script src="/js/alert2.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/inputsgen.js"></script>
+    <script src="/js/subirArchivo.js"></script>
+</body>
+
+</html>

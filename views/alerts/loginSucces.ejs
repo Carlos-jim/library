@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- ... -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="/css/general.css">
+</head>
+
+<body>
+  <!-- ... -->
+  <script>
+    Swal.fire({
+      title: 'Inicio de sesión exitoso',
+      text: 'Serás redirigido a la página principal',
+      icon: 'success',
+      confirmButtonText: 'Aceptar',
+      background: '#ebf5fb', // Color de fondo de la alerta
+      color: '#0c5460', // Color del texto
+      buttonsStyling: false, // Desactiva el estilo por defecto de los botones
+      customClass: {
+        confirmButton: 'btn btn-blue' // Clase personalizada para el botón de confirmar
+      }
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = '/user/home';
+      }
+    });
+  </script>
+</body>
+
+</html>

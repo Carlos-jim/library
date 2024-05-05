@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/ico.jpg" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Carrera de <%= course.title %></title>
+</head>
+
+<body>
+  <%- include('nav') %>
+
+    <div class="container no-select">
+      <div class="search-section section">
+        <img class="backg-home" src="<%= course.image_path %>" alt="" />
+        <div class="search-content">
+          <h1 class="search-title">Licenciatura en <%= course.title %></h1>
+          <p class="search-description">
+            Aqui podras encontrar un poco mas de informacion a lo que se refiere a la carrera de <%= course.title %> asi
+            como algunos libros que esten disponibles.
+          </p>
+          <a href="http://www.misionsucre.gob.ve/triunfadores/index.php"><button
+              class="general-button">Explorar</button></a>
+        </div>
+      </div>
+
+      <div class="container">
+        <h1 class="title-carrera">Todo sobre la licenciatura en <%= course.title %></h1>
+      </div>
+
+      <div class="section">
+        <%= course.description %>
+
+        <br /> <br />
+
+        <div class="container1">
+          <h1 class="title-carrera">Libros relacionados</h1>
+        </div>
+
+        <div class="conteiner-carousel1">
+          <div class="owl-carousel">
+
+            <div class="item">
+              <img src="/images/enfermeria.jpg" alt="">
+              <button class="boton-oculto"><a href=""><span>Ver más</span></a></button>
+            </div>
+
+            <div class="item">
+              <img src="/images/enfermeria.jpg" alt="">
+              <button class="boton-oculto"><a href=""><span>Ver más</span></a></button>
+            </div>
+            <div class="item">
+              <img src="/images/enfermeria.jpg" alt="">
+              <button class="boton-oculto"><a href=""><span>Ver más</span></a></button>
+            </div>
+            <div class="item">
+              <img src="/images/enfermeria.jpg" alt="">
+              <button class="boton-oculto"><a href=""><span>Ver más</span></a></button>
+            </div>
+            <div class="item">
+              <img src="/images/enfermeria.jpg" alt="">
+              <button class="boton-oculto"><a href=""><span>Ver más</span></a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/slider.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1,
+span,p, label, a {
+    font-family: "Montserrat", serif;
+}
+
+#cambiar{
+    width: 100%;
+}
+
+.btncancelar , .btnredireccionar{
+    border: none; /* Sin bordes */
+    border-radius: 15px;
+    color: white; /* Color del texto */
+    padding: 0.6rem 1.5rem; /* Espaciado */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin decoración en el texto */
+    display: inline-block;
+    margin: 1.2rem 2px 0 0;
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.container_{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-weight: 600;
+}
+
+input{
+    font-weight: 500;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container, .container_ {
+    padding: 5vw 0 0 5vw;
+    max-width: 960px;
+    margin-top: 3vw;
+}
+
+.btnredireccionar{
+    background-color: #040dff;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.col {
+    width: 70%;
+}
+
+.container-lg{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input{
+    width: 100%;
+}
+
+.col input{
+    width: 90%;
+}
+
+input {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #d4d4d4;
+    border-radius: 7px;
+    width: 50%;
+    background-color: #ffffff;
+
+}
+
+select.form-select  {
+    color: #717478;
+    font-weight: 500;
+    height: 2.9rem;
+}
+
+.title{
+    width: 100%;
+}
+
+
+
+
+
+input:focus{
+    border-color: #0d6efd; /* Cambia el color al enfocar */
+    box-shadow: 0 0 0 0.20rem #0d6dfd41;
+}
+
+textarea:focus{
+   
+    border-color: #0d6efd; /* Cambia el color al enfocar */
+    box-shadow: 0 0 0 0.20rem #0d6dfd41;
+}
+
+textarea{
+    outline: none;
+    width: 50%;
+    height: 45%;
+    padding: 10px;
+    resize: none !important;
+    background-color: #ffffff;
+    border-radius: 7px;
+    border: 1px solid #d4d4d4;
+}
+
+.btnredireccionar , .btncancelar{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+span{
+    font-weight: bolder;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px !important;
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+button:hover{
+    background-color: #0d35fd;
+}
+
+.btncancelar{
+    background-color: #ff0404;
+}
+
+.btnguardar, .btnguardar2{
+    padding: 10px 30px;
+    cursor: pointer; 
+}
+
+.rowbtn{
+    display: flex;
+    width: 100%;
+}
+
+.text {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form{
+    max-width: 920px;
+}
+
+p {
+    color: #858b96;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.btnredireccionar{
+    width: 90%;
+}
+
+#cambiar{
+    height: 10vw;
+}
+
+#descrip{
+    height: auto;
+}
+
+#descripcion::placeholder{
+    font-weight: 500;
+    color:#717478;
+    padding-left: 0.5rem;
+}
+
+textarea{
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .container, .container_{
+        padding: 5vw 9vw 0 5vw;
+        max-width: 960px;
+        margin-top: 13vw;
+    }
+
+    textarea{
+        height: 20vw;
+        width: 60vw;
+    }
+
+    .btnredireccionar{
+        width: 150%;
+    }
+
+    .rowbtn{
+        padding-left: 5%;
+    }
+
+    .row{
+
+        width: 90%;
+    }
+
+    form{
+        display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+
+    input{
+        padding: 10px;
+        border-radius: 7px;
+        width: 90%;
+        background-color: #ffffff;
+    }
+
+    .col input{
+        width: 150%;
+    }
+
+    #cambiar{
+        margin-bottom: 5rem;
+        width: 90%;
+        height: 17vw;
+    }
+
+    #descrip{
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 377px){
+    .btncancelar{
+        padding: 0.6rem 1.1rem;
+    }
+
+    .btnguardar2{
+        padding: 0.6rem 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width: 321px){
+    .btncancelar{
+        padding: 0.6rem 0.6rem;
+    }
+
+    .btnguardar2{
+        padding: 0.6rem 0.9rem;
+    }
+
+    .title .admin-title{
+        font-size: 2.4rem;
+    }
+    
+
+}

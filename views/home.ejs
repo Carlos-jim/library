@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/ico.jpg">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+
+    <%- include('nav') %>
+
+        <div class="container no-select">
+
+            <div class="search-section section">
+                <img class="backg-home" src="/images/fondo-2.jpg" alt="">
+                <div class="search-content">
+                    <h1 class="search-title">Bienvenido a la biblioteca UBV</h1>
+                    <p class="search-description">Aqui encontraras los trabajos de grado de estudiantes ya egresados e
+                        informacion
+                        sobre las carreras que se dictan en la universidad.
+                    </p>
+                    <a class="btn btn-blue " target="_blank"
+                        href="http://www.misionsucre.gob.ve/triunfadores/index.php">Explorar</a>
+                </div>
+            </div>
+
+            <div class="subtitle-section">
+                <h2 class="section-title">Carreras destacadas</h2>
+            </div>
+
+            <div class="courses-section section">
+
+                <% courses.slice(0, 3).forEach(course=> { %>
+                    <div class="course-card">
+                        <img class="course-img" src="<%= course.image_path %>" alt="">
+                        <div class="course-content">
+                            <h3 class="course-title">
+                                <%= course.title %>
+                            </h3>
+                            <p class="course-description">
+                                <%= course.description %>
+                            </p>
+                            <a class="btn btn-blue" href="/user/courses/course/<%= course.id %>">Leer más</a>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
+
+            <div class="subtitle-section">
+                <h2 class="section-title">Trabajos de grado destacados</h2>
+            </div>
+
+            <div class="degree-projects-section section">
+
+                <div class="dp-element">
+                    <div class="dp-pp-section">
+                        <img class="user-picture" src="/images/zoro.jpg" alt="foto de perfil">
+                    </div>
+                    <div class="dp-description-section">
+                        <h3 class="dp-title">Titulo</h3>
+                        <p class="dp-description">Una breve descripcion sobre el trabajo de grado</p>
+                    </div>
+                    <div class="watch-button">
+                        <a class="btn btn-blue" href="#">Ver</a>
+                    </div>
+                </div>
+
+                <div class="dp-element">
+                    <div class="dp-pp-section">
+                        <img class="user-picture" src="/images/luffy.jpg" alt="foto de perfil">
+                    </div>
+                    <div class="dp-description-section">
+                        <h3 class="dp-title">Titulo</h3>
+                        <p class="dp-description">Una breve descripcion sobre el trabajo de grado</p>
+                    </div>
+                    <div class="watch-button">
+                        <a class="btn btn-blue" href="#">Ver</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <%- include('footer') %>

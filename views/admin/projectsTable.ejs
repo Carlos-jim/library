@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="shortcut icon" href="/images/ico.jpg">
+    <title>Proyectos</title>
+    <link rel="stylesheet" href="/css/tabla.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/3.0.1/css/responsive.bootstrap5.css"
+    />
+  </head>
+
+  <body>
+
+    <%- include('../nav') %>
+
+    <div class="container1">
+      <table
+        id="example"
+        class="table table-striped nowrap"
+        style="width: 100%"
+      >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>CEDULA</th>
+            <th>APELLIDO</th>
+            <th>TELEFONO</th>
+            <th>ROL</th>
+            <th>CORREO</th>
+            <th>CONTRASENA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>30563320</td>
+            <td>Michael</td>
+            <td>Guacache</td>
+            <td>04248385277</td>
+            <td>Estudiante</td>
+            <td>rojasobrayan276@gmail.com</td>
+            <td>918273645</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>31244564</td>
+            <td>Maria</td>
+            <td>Lopez</td>
+            <td>04243565277</td>
+            <td>Estudiante</td>
+            <td>lopezmaria276@gmail.com</td>
+            <td>9137363645</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Link dataTable -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/dataTables.responsive.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.1/js/responsive.bootstrap5.js"></script>
+
+    <!-- Codigo dataTable -->
+    <script src="/js/table.js"></script>
+  </body>
+</html>

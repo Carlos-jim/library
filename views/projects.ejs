@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Proyectos</title>
+</head>
+
+<body>
+    <%- include('nav') %>
+        <div class="container no-select">
+            <div class="search">
+                <input class="input-search" type="text" placeholder="Buscar algun trabajo de grado">
+                <button class="button-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="degree-projects-section section">
+
+                <div class="dp-element">
+                    <div class="dp-pp-section">
+                        <img class="user-picture" src="/images/zoro.jpg" alt="foto de perfil">
+                    </div>
+                    <div class="dp-description-section">
+                        <h3 class="dp-title">Titulo</h3>
+                        <p class="dp-description">Una breve descripcion sobre el trabajo de grado</p>
+                    </div>
+                    <div class="watch-button">
+                        <a class="btn btn-blue" href="#">Ver</a>
+                    </div>
+                </div>
+
+                <div class="dp-element">
+                    <div class="dp-pp-section">
+                        <img class="user-picture" src="/images/luffy.jpg" alt="foto de perfil">
+                    </div>
+                    <div class="dp-description-section">
+                        <h3 class="dp-title">Titulo</h3>
+                        <p class="dp-description">Una breve descripcion sobre el trabajo de grado</p>
+                    </div>
+                    <div class="watch-button">
+                        <a class="btn btn-blue" href="#">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include('footer') %>
